@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>大拇指点赞</title>
+  <title>大拇指点赞功能</title>
   <link href="./css/index.css" rel="stylesheet">
 </head>
 
@@ -16,6 +16,29 @@
     <div class="finger thumb"></div>
     <div class="arm"></div>
   </div>
+  <script type="text/javascript" src="./scripts/jquery.js"></script>
+  <script type="text/javascript" src="./scripts/system.js"></script>
+  <script type="text/javascript">
+  SystemJS.config({
+    baseURL: '/firstweek/es6'
+  });
+  SystemJS.import('index.js').then(function(m) {
+    //console.log(m);
+    //console.log(m.default);
+    $.extend({
+      thumb: m.default
+    });
+    //console.log(thumb);
+    //console.log($.thumb);
+    callBack();
+  });
+
+  function callBack() {
+    var f = new $.thumb(0, $('#thumb'));
+    f.clickAction();
+  }
+
+  </script>
 </body>
 
 </html>
