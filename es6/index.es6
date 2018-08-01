@@ -21,6 +21,7 @@ class PraiseButton{
         })
     }
 }
+//继承类 PraiseButton
 class Thumb extends PraiseButton{
     constructor(num,element){
         super(num,element);

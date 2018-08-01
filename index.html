@@ -16,11 +16,13 @@
     <div class="finger thumb"></div>
     <div class="arm"></div>
   </div>
+  <span class="hide" id="animation">+1</span>
   <script type="text/javascript" src="./scripts/jquery.js"></script>
   <script type="text/javascript" src="./scripts/system.js"></script>
+  <script type="text/javascript" src="index.js"></script>
   <script type="text/javascript">
   SystemJS.config({
-    baseURL: '/firstweek/es6'
+    baseURL: '/firstweek/lib'
   });
   SystemJS.import('index.js').then(function(m) {
     //console.log(m);
